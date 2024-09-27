@@ -1,0 +1,42 @@
+<!-- PAGE: Categories -->
+<!-- FILE: categories.ejs -->
+
+<%- include('header'); -%>
+
+    <!-- Navbar -->
+    <%- include('navbar'); -%>
+
+        <main class="content">
+            <!-- Categories Section -->
+            <section class="container px-5 mt-5">
+                <div class="mb-5">
+                    <h2 class="text-dark mb-0 fw-bold">Categories</h2>
+                    <p class="text-muted">Find the perfect bike that suits your style and needs.</p>
+                </div>
+                <div id="categories-list" class="row g-4">
+                    <% for (let category of categories) { -%>
+                        <div class="col-md-6 col-lg-3 col-12">
+                            <div class="card h-100 shadow-sm border-0">
+                                <div class="position-relative">
+                                    <img src="<%= category.CATEGORY_IMAGE %>" class="card-img-top img-fluid rounded"
+                                        alt="">
+                                    <div
+                                        class="card-img-overlay d-flex align-items-center justify-content-center bg-dark bg-opacity-50 rounded">
+                                        <h5 class="lead text-white text-center m-0">
+                                            <%= category.CATEGORY_NAME %>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="card-body text-start">
+                                    <p class="small mb-0">
+                                        <%= category.CATEGORY_DESC %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <% } -%>
+                </div>
+            </section>
+        </main>
+
+        <%- include('footer'); -%>

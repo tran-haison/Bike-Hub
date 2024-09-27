@@ -1,0 +1,46 @@
+<!-- FILE: navbar.ejs -->
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top bg-black navbar-dark py-3">
+    <div class="container-fluid px-5">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="images/logo.png" alt="Bike Hub Logo" height="40" class="me-3">
+            Bike Hub
+        </a>
+        <!-- Toggler button for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/bikes">Bikes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/categories">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/brands">Brands</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-us">Contact Us</a>
+                </li>
+            </ul>
+            <!-- Search & Cart -->
+            <form class="d-flex" action="/bikes" method="get">
+                <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search"
+                    id="search-input" name="search">
+                <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                <a href="/cart" class="btn btn-outline-light ms-2">
+                    <i class="fas fa-cart-shopping"></i>
+                </a>
+                <a href="/profile" class="btn btn-outline-light ms-2">
+                    <i class="fas fa-user"></i>
+                </a>
+            </form>
+        </div>
+    </div>
+</nav>

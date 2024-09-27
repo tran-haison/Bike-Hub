@@ -1,0 +1,166 @@
+<!-- PAGE: Home -->
+<!-- FILE: index.ejs -->
+
+<%- include('header'); -%>
+
+    <header>
+        <!-- Navbar -->
+        <%- include('navbar'); -%>
+
+            <!-- Hero Section -->
+            <div class="container-fluid p-0">
+                <div class="hero text-white d-flex align-items-center hero">
+                    <div class="container text-center">
+                        <h1 class="display-3">Ride Into Adventure</h1>
+                        <p class="lead mb-4 text-white-50">Discover top-quality bikes for every journey, from
+                            mountain
+                            trails to city streets.</p>
+                        <a href="/bikes" class="btn btn-outline-light rounded-5 px-4 py-2">Shop now</a>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <main class="content">
+        <!-- Categories Section -->
+        <section class="container mt-5">
+            <div class="text-center mb-5">
+                <h2 class="text-dark">Explore Our Categories</h2>
+                <p class="text-muted">Find the perfect bike that suits your style and needs.</p>
+            </div>
+            <div class="row mb-2 g-2">
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="images/img_bike_mountain.jpg" alt="Mountain Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Mountain Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="images/img_bike_road.jpg" alt="Road Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Road Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="images/img_bike_hybrid.jpg" alt="Hybrid Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Hybrid Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="images/img_bike_electric.jpg" alt="Electric Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Electric Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-2">
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="images/img_bike_folding.jpg" alt="Folding Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Folding Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="images/img_bike_cruiser.jpg" alt="Cruiser Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Cruiser Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="images/img_bike_kid.jpg" alt="Kid Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Kid Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="images/img_bike_gravel.jpg" alt="Gravel Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Gravel Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exploring Section -->
+        <section class="bg-black mt-5 py-5 align-content-center">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="text-center text-white">
+                    <h1 class="display-6">Discover Your Perfect Ride</h1>
+                    <p class="fw-light text-white-50">At Bike Hub, we bring you the finest selection of bicycles for
+                        every
+                        adventure.
+                    </p>
+                    <a href="/bikes" class="btn btn-outline-light rounded-5 px-4 py-2 mt-2">
+                        Explore Our Collection
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands Section -->
+        <section class="container mt-5">
+            <div class="text-center mb-5">
+                <h2 class="text-dark">Our Trusted Brands</h2>
+                <p class="text-muted">Partnering with the best brands in the industry to bring you top-quality
+                    bikes.
+                </p>
+            </div>
+            <div class="row justify-content-center g-5">
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="images/img_logo_giant_bike.avif" alt="Giant" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="images/img_logo_momentum_bike.avif" alt="Momentum" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="images/img_logo_scott_bike.avif" alt="Scott" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="images/img_logo_malvernstar_bike.avif" alt="Malvern Star" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="images/img_logo_avanti_bike.webp" alt="Avanti" class="img-fluid">
+                </div>
+
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="images/img_logo_giro_bike.avif" alt="Giro" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="images/img_logo_parktool_bike.avif" alt="Park Tool" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="images/img_logo_topeak_bike.avif" alt="Topeak" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="images/img_logo_wahoo_bike.avif" alt="Wahoo" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="images/img_logo_maxxis_bike.avif" alt="Maxxis" class="img-fluid">
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="/brands" class="btn btn-dark rounded-3 px-5 py-3 mt-5">
+                    <p class="small mb-0 fw-light">VIEW ALL BRANDS</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <%- include('footer'); -%>

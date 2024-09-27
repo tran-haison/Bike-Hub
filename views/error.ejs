@@ -1,0 +1,22 @@
+<!-- PAGE: Error -->
+<!-- FILE: error.ejs -->
+
+<%- include('header'); -%>
+
+    <!-- Navbar -->
+    <%- include('navbar'); -%>
+
+        <main class="content">
+            <section class="container px-5 mt-5">
+                <div class="mb-5">
+                    <h2 class="text-dark mb-0 fw-bold">
+                        <%= error.status %>
+                    </h2>
+                    <p class="text-muted">
+                        <%= error.stack %>
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <%- include('footer'); -%>

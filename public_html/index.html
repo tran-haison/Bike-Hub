@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Hai Son Tran">
+    <meta name="description" content="Welcome to Bike Hub - Your Ultimate Destination for High-Quality Bicycles">
+    <title>Bike Hub - Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="page-wrapper">
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg sticky-top bg-black navbar-dark py-3">
+            <div class="container-fluid px-5">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="resources/images/logo.png" alt="Bike Hub Logo" height="40" class="me-3">
+                    Bike Hub
+                </a>
+                <!-- Toggler button for mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="bikes.html">Bikes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="categories.html">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="brands.html">Brands</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact_us.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <!-- Search & Cart -->
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                        <a href="cart.html" class="btn btn-outline-light ms-2">
+                            <i class="fas fa-cart-shopping"></i>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="container-fluid p-0">
+            <div class="hero text-white d-flex align-items-center hero">
+                <div class="container text-center">
+                    <h1 class="display-3">Ride Into Adventure</h1>
+                    <p class="lead mb-4 text-white-50">Discover top-quality bikes for every journey, from mountain
+                        trails to city streets.</p>
+                    <a href="bikes.html" class="btn btn-outline-light rounded-5 px-4 py-2">Shop now</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="content">
+        <!-- Categories Section -->
+        <section class="container mt-5">
+            <div class="text-center mb-5">
+                <h2 class="text-dark">Explore Our Categories</h2>
+                <p class="text-muted">Find the perfect bike that suits your style and needs.</p>
+            </div>
+            <div class="row mb-2 g-2">
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="resources/images/img_bike_mountain.jpg" alt="Mountain Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Mountain Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="resources/images/img_bike_road.jpg" alt="Road Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Road Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="resources/images/img_bike_hybrid.jpg" alt="Hybrid Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Hybrid Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="resources/images/img_bike_electric.jpg" alt="Electric Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Electric Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-2">
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="resources/images/img_bike_folding.jpg" alt="Folding Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Folding Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="resources/images/img_bike_cruiser.jpg" alt="Cruiser Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Cruiser Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="resources/images/img_bike_kid.jpg" alt="Kid Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Kid Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 px-1">
+                    <div class="card border-0 shadow text-white rounded-0">
+                        <img src="resources/images/img_bike_gravel.jpg" alt="Gravel Bikes">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center m-0 p-0">Gravel Bikes</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exploring Section -->
+        <section class="bg-black mt-5 py-5 align-content-center">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="text-center text-white">
+                    <h1 class="display-6">Discover Your Perfect Ride</h1>
+                    <p class="fw-light text-white-50">At Bike Hub, we bring you the finest selection of bicycles for every
+                        adventure.
+                    </p>
+                    <a href="bikes.html" class="btn btn-outline-light rounded-5 px-4 py-2 mt-2">
+                        Explore Our Collection
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands Section -->
+        <section class="container mt-5">
+            <div class="text-center mb-5">
+                <h2 class="text-dark">Our Trusted Brands</h2>
+                <p class="text-muted">Partnering with the best brands in the industry to bring you top-quality bikes.
+                </p>
+            </div>
+            <div class="row justify-content-center g-5">
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="resources/images/img_logo_giant_bike.avif" alt="Giant" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="resources/images/img_logo_momentum_bike.avif" alt="Momentum" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="resources/images/img_logo_scott_bike.avif" alt="Scott" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="resources/images/img_logo_malvernstar_bike.avif" alt="Malvern Star" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="resources/images/img_logo_avanti_bike.webp" alt="Avanti" class="img-fluid">
+                </div>
+
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="resources/images/img_logo_giro_bike.avif" alt="Giro" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="resources/images/img_logo_parktool_bike.avif" alt="Park Tool" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="resources/images/img_logo_topeak_bike.avif" alt="Topeak" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="resources/images/img_logo_wahoo_bike.avif" alt="Wahoo" class="img-fluid">
+                </div>
+                <div class="col-4 col-md-3 col-lg-2 mx-2 align-content-center">
+                    <img src="resources/images/img_logo_maxxis_bike.avif" alt="Maxxis" class="img-fluid">
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="brands.html" class="btn btn-dark rounded-3 px-5 py-3 mt-5">
+                    <p class="small mb-0 fw-light">VIEW ALL BRANDS</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-black text-white-50 py-4 mt-5">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <!-- Copyright Information -->
+                <div class="col-sm-12 col-md-4 text-center text-md-start">
+                    <p class="small mb-0">&copy;2024 Bike Hub. All rights reserved.</p>
+                </div>
+                <!-- Follow Us Links -->
+                <div class="col-sm-12 col-md-4 text-center">
+                    <a href="#" class="text-white-50 me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white-50 me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white-50"><i class="fab fa-instagram"></i></a>
+                </div>
+                <!-- Contact Information -->
+                <div class="col-sm-12 col-md-4 text-center text-md-end">
+                    <p class="small mb-0">Contact:
+                        <a href="mailto:info@bikehub.com" class="text-white-50">info@bikehub.com</a>
+                    </p>
+                    <p class="small mb-1"><i>Last updated: <span id="last-updated"></span></i></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lastUpdated = new Date(document.lastModified);
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('last-updated').textContent = lastUpdated.toLocaleDateString(undefined, options);
+        });
+    </script>
+</body>
+
+</html>

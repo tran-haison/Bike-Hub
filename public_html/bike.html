@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Hai Son Tran">
+    <meta name="description" content="Bike details">
+    <title>Bike details</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- JavaScript Handler -->
+    <script src="bike.js"></script>
+</head>
+
+<body class="page-wrapper">
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg sticky-top bg-black navbar-dark py-3">
+            <div class="container-fluid px-5">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="resources/images/logo.png" alt="Bike Hub Logo" height="40" class="me-3">
+                    Bike Hub
+                </a>
+                <!-- Toggler button for mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="bikes.html">Bikes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="categories.html">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="brands.html">Brands</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact_us.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <!-- Search & Cart -->
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                        <a href="cart.html" class="btn btn-outline-light ms-2">
+                            <i class="fas fa-cart-shopping"></i>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        <section class="container px-5 mt-5">
+            <!-- Breadcrumbs -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item small"><a href="index.html"
+                            class="text-decoration-none text-muted">Home</a></li>
+                    <li class="breadcrumb-item small"><a href="bikes.html"
+                            class="text-decoration-none text-muted">Bikes</a></li>
+                    <li class="breadcrumb-item small text-black" aria-current="page" id="product-name-breadcrumb">Details</li>
+                </ol>
+            </nav>
+
+            <!-- Bike Detail -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-7 col-12">
+                    <div class="product-gallery">
+                        <!-- Main image -->
+                        <img id="product-image" src="resources/images/img_bike_1.webp" class="img-fluid rounded"
+                            alt="Bike Image">
+                        <!-- Thumbnail images -->
+                        <div class="mt-0 d-flex justify-content-center">
+                            <img src="resources/images/img_bike_1.webp" class="img-thumbnail mx-2" alt="Thumbnail 1"
+                                style="width: 80px;" id="product-thumbnail-1">
+                            <img src="resources/images/img_bike_1.webp" class="img-thumbnail mx-2" alt="Thumbnail 2"
+                                style="width: 80px;" id="product-thumbnail-2">
+                            <img src="resources/images/img_bike_1.webp" class="img-thumbnail mx-2" alt="Thumbnail 3"
+                                style="width: 80px;" id="product-thumbnail-3">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-12">
+                    <div style="height: 40px;"></div>
+                    <!-- Product Details -->
+                    <div class="product-details text-black">
+                        <!-- Brand -->
+                        <p id="product-brand" class="small text-secondary mb-1">Trail Master</p>
+
+                        <!-- Name -->
+                        <h2 id="product-name" class="text-black fw-bold mb-0">Mountain Bike X500</h2>
+
+                        <!-- Rating -->
+                        <div class="rating my-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                            <span class="ms-2">4.5 (256 reviews)</span>
+                        </div>
+
+                        <!-- Category -->
+                        <div class="d-inline-flex px-3 py-1 rounded-5 border my-2">
+                            <p id="product-category" class="small m-0 text-secondary">Mountain Bike</p>
+                        </div>
+
+                        <!-- Price -->
+                        <h3 id="product-price" class="text-black fw-bold my-2">$550</h3>
+
+                        <!-- Size & Quantity -->
+                        <div class="row mb-1 mt-3">
+                            <!-- Size -->
+                            <div class="col-6">
+                                <p class="small text-muted mb-1">Size:</p>
+                                <select id="product-size" class="form-select rounded-2" style="height: 45px;">
+                                    <option value="size-small">Small</option>
+                                    <option value="size-medium">Medium</option>
+                                    <option value="size-large">Large</option>
+                                </select>
+                            </div>
+
+                            <!-- Quantity -->
+                            <div class="col-6">
+                                <p class="small text-muted mb-1">Quantity:</p>
+                                <div class="d-flex align-items-center border border-muted rounded-2"
+                                    style="height: 45px;">
+                                    <!-- Decrease Button -->
+                                    <button class="btn me-2" type="button" id="decrease-quantity" onclick="decreaseQuantity()">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+
+                                    <!-- Quantity Display -->
+                                    <input type="text" id="product-quantity"
+                                        class="form-control text-center flex-grow-1 border-0 p-0" value="1" readonly>
+
+                                    <!-- Increase Button -->
+                                    <button class="btn ms-2" type="button" id="increase-quantity" onclick="increaseQuantity()">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add to Cart Button -->
+                        <div class="d-grid gap-2 my-4">
+                            <button type="button"
+                                class="d-flex align-items-center justify-content-center btn btn-dark rounded-2 py-3">
+                                <i class="fas fa-shopping-cart me-3"></i>
+                                <p class="small mb-0 fw-light py-0">ADD TO CART</p>
+                            </button>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="my-3">
+                            <strong>Description:</strong>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Nulla blandit neque quis magna aliquet, in suscipit metus pretium.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specifications -->
+            <div class="mb-5">
+                <h2 class="text-dark fw-bold mb-3">Specifications</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Feature</th>
+                                <th scope="col">Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Color</td>
+                                <td>Black</td>
+                            </tr>
+                            <tr>
+                                <td>Weight</td>
+                                <td>10kg</td>
+                            </tr>
+                            <tr>
+                                <td>Height</td>
+                                <td>130mm</td>
+                            </tr>
+                            <tr>
+                                <td>Length</td>
+                                <td>200mm</td>
+                            </tr>
+                            <tr>
+                                <td>Frame Material</td>
+                                <td>Aluminum Alloy</td>
+                            </tr>
+                            <tr>
+                                <td>Brake System</td>
+                                <td>Hydraulic Disc</td>
+                            </tr>
+                            <tr>
+                                <td>Wheel Size</td>
+                                <td>29 inches</td>
+                            </tr>
+                            <tr>
+                                <td>Suspension</td>
+                                <td>Front Suspension</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-black text-white-50 py-4 mt-5">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <!-- Copyright Information -->
+                <div class="col-sm-12 col-md-4 text-center text-md-start">
+                    <p class="small mb-0">&copy;2024 Bike Hub. All rights reserved.</p>
+                </div>
+                <!-- Follow Us Links -->
+                <div class="col-sm-12 col-md-4 text-center">
+                    <a href="#" class="text-white-50 me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white-50 me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white-50"><i class="fab fa-instagram"></i></a>
+                </div>
+                <!-- Contact Information -->
+                <div class="col-sm-12 col-md-4 text-center text-md-end">
+                    <p class="small mb-0">Contact:
+                        <a href="mailto:info@bikehub.com" class="text-white-50">info@bikehub.com</a>
+                    </p>
+                    <p class="small mb-1"><i>Last updated: <span id="last-updated"></span></i></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lastUpdated = new Date(document.lastModified);
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('last-updated').textContent = lastUpdated.toLocaleDateString(undefined, options);
+        });
+    </script>
+</body>
+
+</html>

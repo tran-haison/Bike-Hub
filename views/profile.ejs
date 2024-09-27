@@ -1,0 +1,112 @@
+<!-- PAGE: Profile -->
+<!-- FILE: profile.ejs -->
+
+<%- include('header'); -%>
+
+    <!-- Navbar -->
+    <%- include('navbar'); -%>
+
+        <main class="content">
+            <section class="container px-5 mt-5 text-dark">
+                <div class="row align-items-center g-5 justify-content-center">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h1 class="display-5 fw-bold text-dark">Profile</h1>
+                                <p class="text-muted">View your profile details</p>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Update profile -->
+                                <a href="/update-profile" class="btn btn-outline-dark rounded-5 px-4 py-2 mt-2">
+                                    Update Profile
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row g-2">
+                            <div class="col-md-6 col-12">
+                                <!-- Fullname -->
+                                <div style="border-left: thick solid #000000; padding-left: 10px;" class="mb-4">
+                                    <p class="mb-0 text-muted">Fullname</p>
+                                    <% if (user.USER_FULLNAME !=null && user.USER_FULLNAME !=undefined &&
+                                        user.USER_FULLNAME !='' ) { %>
+                                        <h5 class="mb-0">
+                                            <%= user.USER_FULLNAME %>
+                                        </h5>
+                                        <% } else { %>
+                                            <i class="mb-0">Not set</i>
+                                            <% } %>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <!-- Username -->
+                                <div style="border-left: thick solid #000000; padding-left: 10px;" class="mb-4">
+                                    <p class="mb-0 text-muted">Username</p>
+                                    <h5 class="mb-0">
+                                        <%= user.USER_USERNAME %>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div style="border-left: thick solid #000000; padding-left: 10px;" class="mb-4">
+                            <p class="mb-0 text-muted">Email</p>
+                            <% if (user.USER_EMAIL !=null && user.USER_EMAIL !=undefined && user.USER_EMAIL !='' ) { %>
+                                <h5 class="mb-0">
+                                    <%= user.USER_EMAIL %>
+                                </h5>
+                                <% } else { %>
+                                    <i class="mb-0">Not set</i>
+                                    <% } %>
+                        </div>
+
+                        <!-- Phone -->
+                        <div style="border-left: thick solid #000000; padding-left: 10px;" class="mb-4">
+                            <p class="mb-0 text-muted">Phone number</p>
+                            <% if (user.USER_PHONE !=null && user.USER_PHONE !=undefined && user.USER_PHONE !='' ) { %>
+                                <h5 class="mb-0">
+                                    <%= user.USER_PHONE %>
+                                </h5>
+                                <% } else { %>
+                                    <i class="mb-0">Not set</i>
+                                    <% } %>
+                        </div>
+
+                        <!-- Address -->
+                        <div style="border-left: thick solid #000000; padding-left: 10px;" class="mb-4">
+                            <p class="mb-0 text-muted">Address</p>
+                            <% if (user.USER_ADDRESS !=null && user.USER_ADDRESS !=undefined && user.USER_ADDRESS !='' )
+                                { %>
+                                <h5 class="mb-0">
+                                    <%= user.USER_ADDRESS %>
+                                </h5>
+                                <% } else { %>
+                                    <i class="mb-0">Not set</i>
+                                    <% } %>
+                        </div>
+
+                        <!-- DoB -->
+                        <div style="border-left: thick solid #000000; padding-left: 10px;" class="mb-4">
+                            <p class="mb-0 text-muted">Date of Birth</p>
+                            <% if (user.USER_DOB !=null && user.USER_DOB !=undefined && user.USER_DOB !='' ) { %>
+                                <h5 class="mb-0">
+                                    <%= user.USER_DOB %>
+                                </h5>
+                                <% } else { %>
+                                    <i class="mb-0">Not set</i>
+                                    <% } %>
+                        </div>
+
+                        <!-- Logout -->
+                        <form action="/logout" method="GET">
+                            <button type="submit" class="btn btn-danger rounded-5 px-4 py-2 mt-2">
+                                Logout
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <%- include('footer'); -%>

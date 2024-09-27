@@ -1,0 +1,101 @@
+<!-- PAGE: Bikes -->
+<!-- FILE: bikes.ejs -->
+
+<%- include('header'); -%>
+
+    <!-- Navbar -->
+    <%- include('navbar'); -%>
+
+        <main class="content">
+            <!-- Bikes Section -->
+            <section class="container px-5 mt-5">
+                <div class="row align-items-center mb-3 g-2">
+                    <div class="col-md-6">
+                        <h2 class="text-dark fw-bold">
+                            <% if (searchTerm) { %>
+                                Search results for <span class="text-danger"><%= searchTerm %></span>
+                            <% } else { %>
+                                Our Collection
+                            <% } %>
+                        </h2>
+                    </div>
+                    <div class="col-md-6 d-md-flex justify-content-end">
+                        <div>
+                            <select id="sort" class="form-select form-select-sm">
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="name-asc">Name: A to Z</option>
+                                <option value="name-desc">Name: Z to A</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike List -->
+                <div id="bike-list" class="row g-4">
+                    <% for (let bike of bikes) { %>
+                        <% const fullStars=Math.floor(bike.BIKE_RATING); const hasHalfStar=bike.BIKE_RATING % 1 !==0;
+                            const emptyStars=5 - fullStars - (hasHalfStar ? 1 : 0); %>
+
+                            <div class="col-md-6 col-lg-4 col-12">
+                                <div class="card">
+                                    <img src="<%= bike.BIKE_IMAGE %>" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <!-- Bike Type -->
+                                        <div class="d-inline-flex mx-1 px-3 py-1 rounded-5 border">
+                                            <p class="small m-0 text-secondary">
+                                                <%= bike.BIKE_TYPE %>
+                                            </p>
+                                        </div>
+
+                                        <!-- Bike Name -->
+                                        <div class="d-flex justify-content-between align-items-center mb-1 mt-3 px-1">
+                                            <h5 class="text-dark card-title mb-0">
+                                                <%= bike.BIKE_NAME %>
+                                            </h5>
+                                            <p class="h5 text-dark fw-bold mb-0">$<%= bike.BIKE_PRICE %>
+                                            </p>
+                                        </div>
+
+                                        <!-- Bike Brand -->
+                                        <p class="small text-secondary mb-1 px-1">
+                                            <%= bike.BIKE_BRAND %>
+                                        </p>
+
+                                        <!-- Bike Rating -->
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <div class="rating text-warning">
+                                                <!-- Full Stars -->
+                                                <% for(let i=0; i < fullStars; i++) { %>
+                                                    <i class="fas fa-star" style="color: gold;"></i>
+                                                    <% } %>
+                                                        <!-- Half Star -->
+                                                        <% if(hasHalfStar) { %>
+                                                            <i class="fas fa-star-half-alt" style="color: gold;"></i>
+                                                            <% } %>
+                                                                <!-- Empty Stars -->
+                                                                <% for(let i=0; i < emptyStars; i++) { %>
+                                                                    <i class="far fa-star" style="color: gold;"></i>
+                                                                    <% } %>
+                                            </div>
+                                            <a href="/bike?id=<%= bike.BIKE_ID %>"
+                                                class="btn btn-outline-dark btn-sm me-1">
+                                                View Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <% } %>
+                </div>
+
+                <% if (searchTerm && bikes.length == 0) { %>
+                    <p class="text-dark fw-bold mt-4">
+                        No result found
+                    </p>
+                <% } %>
+            </section>
+        </main>
+
+        <%- include('footer'); -%>

@@ -1,0 +1,208 @@
+<!-- PAGE: Contact Us -->
+<!-- FILE: contact-us.ejs -->
+
+<%- include('header'); -%>
+
+    <!-- Navbar -->
+    <%- include('navbar'); -%>
+
+        <main class="content">
+            <!-- About Us -->
+            <section class="container px-5 mt-5 text-dark">
+                <div class="mb-5 text-center">
+                    <h2 class="fw-bold">About Us</h2>
+                </div>
+
+                <!-- About Us Content -->
+                <div class="mb-5">
+                    <h4 class="lead fw-medium">Our Beginning</h4>
+                    <p class="text-muted fw-light">
+                        At Bike Hub, our journey began with a simple yet powerful idea: to create a community where
+                        cyclists
+                        of all
+                        levels can find the perfect ride. Born out of a deep passion for cycling, we set out to build a
+                        space where
+                        quality, expertise, and customer satisfaction converge. What started as a small local shop in
+                        the
+                        heart of
+                        Melbourne has grown into a comprehensive online platform, serving cyclists across the nation.
+                    </p>
+                </div>
+                <div class="mb-5">
+                    <h4 class="lead fw-medium">Our Commitment</h4>
+                    <p class="text-muted fw-light">
+                        Our commitment to excellence is driven by our love for the sport and the joy it brings to
+                        people's
+                        lives. Each
+                        bike we offer is carefully selected, ensuring that it meets the highest standards of performance
+                        and
+                        durability.
+                        Whether you're a casual rider, a commuter, or an adventure enthusiast, we believe that the right
+                        bike can
+                        transform your experience, making every ride a memorable one.
+                    </p>
+                </div>
+                <div class="mb-5">
+                    <h4 class="lead fw-medium">More Than Just a Store</h4>
+                    <p class="text-muted fw-light">
+                        But Bike Hub is more than just a store—it's a community. We understand that cycling is more than
+                        just a hobby;
+                        it's a lifestyle, a form of expression, and for many, a means of freedom. That's why we go
+                        beyond
+                        selling bikes.
+                        We provide expert advice, offer personalized recommendations, and are always here to support you
+                        on
+                        your cycling
+                        journey. Our goal is to help you find not just a bike, but the perfect companion for your
+                        adventures, no matter
+                        where they may take you.
+                    </p>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="row g-4">
+                    <!-- Email -->
+                    <div class="col-md-6 col-lg-3 col-12">
+                        <div class="d-flex align-items-start">
+                            <div class="px-3 py-2 rounded-3 align-items-center bg-body-secondary">
+                                <i class="fas fa-envelope text-dark"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="m-0">Email</h6>
+                                <p class="m-0 small fw-light">
+                                    <a href="mailto:info@bikehub.com" class="text-dark text-decoration-none">
+                                        info@bikehub.com
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="col-md-6 col-lg-3 col-12">
+                        <div class="d-flex align-items-start">
+                            <div class="px-3 py-2 rounded-3 align-items-center bg-body-secondary">
+                                <i class="fas fa-phone text-dark"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="m-0">Phone</h6>
+                                <p class="m-0 small fw-light">
+                                    <a href="tel:+61789123456" class="text-dark text-decoration-none">+61 789 123
+                                        456</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="col-md-6 col-lg-3 col-12">
+                        <div class="d-flex align-items-start">
+                            <div class="px-3 py-2 rounded-3 align-items-center bg-body-secondary">
+                                <i class="fas fa-map-marker-alt text-dark"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="m-0">Address</h6>
+                                <p class="m-0 small fw-light">
+                                    Melbourne, Australia
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Working Hours -->
+                    <div class="col-md-6 col-lg-3 col-12">
+                        <div class="d-flex align-items-start">
+                            <div class="px-3 py-2 rounded-3 align-items-center bg-body-secondary">
+                                <i class="fas fa-clock text-dark"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="m-0">Working Hours</h6>
+                                <p class="m-0 small fw-light">
+                                    10AM - 10PM (Mon - Fri)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact us -->
+            <section class="container px-5 mt-5 text-dark">
+                <div class="mb-5 text-center">
+                    <h2 class="fw-bold mb-0">Get in Touch</h2>
+                    <p class="text-muted">We'd love to hear from you! Please fill out the form below to reach us.</p>
+                </div>
+                <form class="contact-us-form" novalidate action="/feedback-submitted" method="post">
+                    <div class="row g-3">
+                        <!-- Full Name -->
+                        <div class="col-12 col-md-6">
+                            <div class="form-floating">
+                                <input type="text" id="fullname-input" class="form-control" name="fullname"
+                                    placeholder="Fullname" required>
+                                <label for="fullname-input">Full Name</label>
+                                <div class="invalid-feedback">
+                                    Enter your full name
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="col-12 col-md-6">
+                            <div class="form-floating">
+                                <input type="email" id="email-input" class="form-control" name="email"
+                                    placeholder="Email" required>
+                                <label for="email-input">Email Address</label>
+                                <div class="invalid-feedback">
+                                    Enter a valid email
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <!-- Subject -->
+                        <div class="form-floating">
+                            <input type="text" id="subject-input" class="form-control" name="subject"
+                                placeholder="Subject" required>
+                            <label for="subject-input">Subject</label>
+                            <div class="invalid-feedback">
+                                Enter your subject
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <!-- Message -->
+                        <div class="form-floating">
+                            <textarea id="message-input" class="form-control" name="message" placeholder="Message"
+                                rows="6" style="height: 150px;" required></textarea>
+                            <label for="message-input">Your Message</label>
+                            <div class="invalid-feedback">
+                                Enter your message
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row px-0 mx-0 justify-content-center">
+                        <button type="submit" class="btn btn-dark btn-lg rounded-3" onclick="validateForm()">
+                            <p class="small mb-0 fw-medium">Submit</p>
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <script>
+            function validateForm() {
+                const form = document.querySelector('.contact-us-form');
+
+                // Add event listener when submitting form
+                // Prevent submitting and showing error if invalidated
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            }
+        </script>
+
+        <%- include('footer'); -%>
